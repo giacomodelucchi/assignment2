@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="it.unipd.mtss.AppTest" time="0.057" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="it.unipd.mtss.AppTest" time="0.054" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\nicco\Documents\GitHub\assignment2\roman-number\target\test-classes;C:\Users\nicco\Documents\GitHub\assignment2\roman-number\target\classes;C:\Users\nicco\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\nicco\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.class.path" value="c:\Users\nicco\Documents\GitHub\assignment2\roman-number\target\test-classes;c:\Users\nicco\Documents\GitHub\assignment2\roman-number\target\classes;C:\Users\nicco\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\nicco\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IT"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\nicco\AppData\Local\Temp\surefire94448018272261086\surefirebooter17566556584117074988.jar C:\Users\nicco\AppData\Local\Temp\surefire94448018272261086 2024-05-11T16-01-10_228-jvmRun1 surefire4418293092746266657tmp surefire_06352899273891002831tmp"/>
+    <property name="sun.java.command" value="C:\Users\nicco\AppData\Local\Temp\surefire10793579557555653996\surefirebooter8257656433588468408.jar C:\Users\nicco\AppData\Local\Temp\surefire10793579557555653996 2024-05-11T16-22-04_997-jvmRun1 surefire3323466108087304986tmp surefire_09023115437339903598tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\nicco\Documents\GitHub\assignment2\roman-number\target\test-classes;C:\Users\nicco\Documents\GitHub\assignment2\roman-number\target\classes;C:\Users\nicco\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\nicco\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="surefire.test.class.path" value="c:\Users\nicco\Documents\GitHub\assignment2\roman-number\target\test-classes;c:\Users\nicco\Documents\GitHub\assignment2\roman-number\target\classes;C:\Users\nicco\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\nicco\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\nicco"/>
     <property name="user.language" value="it"/>
@@ -25,12 +25,12 @@
     <property name="java.version.date" value="2024-01-16"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-21"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="C:\Users\nicco\Documents\GitHub\assignment2\roman-number"/>
+    <property name="basedir" value="c:\Users\nicco\Documents\GitHub\assignment2\roman-number"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\nicco\AppData\Local\Temp\surefire94448018272261086\surefirebooter17566556584117074988.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\nicco\AppData\Local\Temp\surefire10793579557555653996\surefirebooter8257656433588468408.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.2+13-LTS-58"/>
@@ -45,7 +45,7 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\nicco\AppData\Local\Temp\"/>
     <property name="java.version" value="21.0.2"/>
-    <property name="user.dir" value="C:\Users\nicco\Documents\GitHub\assignment2\roman-number"/>
+    <property name="user.dir" value="c:\Users\nicco\Documents\GitHub\assignment2\roman-number"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
@@ -58,5 +58,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="it.unipd.mtss.AppTest" time="0.005"/>
+  <testcase name="shouldAnswerWithTrue" classname="it.unipd.mtss.AppTest" time="0.018"/>
 </testsuite>
