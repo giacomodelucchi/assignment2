@@ -3,4 +3,4 @@ repository dedicato allo sviluppo dell'assignment2 per la creazione di un progra
 
 [![Java CI with Maven](https://github.com/giacomodelucchi/assignment2/actions/workflows/build.yml/badge.svg?branch=main&event=push)](https://github.com/giacomodelucchi/assignment2/actions/workflows/build.yml)
 
-https://github.com/giacomodelucchi/assignment2/blob/main/roman-number/target/site/jacoco/index.html
+https://github.com/giacomodelucchi/assignment2/blob/main/roman-number/target/site/jacoco/jacoco.csv
