@@ -33,14 +33,22 @@ public class RomanPrinter {
             "    \\  /    ", 
             "     \\/     "};
 
+        String[] X ={" __   __  ", 
+            " \\ \\ / /  ",
+            "  \\ V /   ",
+            "   > <    ",
+            "  / . \\   ",
+            " /_/ \\_\\  "};
+
         String result="";
 
         for (int j=0; j<6;j++){
             for (char c : romanNumber.toCharArray()) {
                 if(c =='I') {result+= I[j];}
                 if(c =='V') {result+= V[j];}
+                if(c =='X') {result+= X[j];}
                 
-                if (!(Arrays.asList('I', 'V').contains(c))){
+                if (!(Arrays.asList('I', 'V', 'X').contains(c))){
                     throw new NotRomanLetterException(c);
                 }
             }    
