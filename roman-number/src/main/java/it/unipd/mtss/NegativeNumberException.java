@@ -5,14 +5,8 @@
 
 package it.unipd.mtss;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+public class NegativeNumberException extends Exception {
+    public NegativeNumberException(){
+        super("Non esistono numeri romani negativi!");
     }
 }

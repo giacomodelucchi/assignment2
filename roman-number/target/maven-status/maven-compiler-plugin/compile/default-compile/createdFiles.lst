@@ -1,0 +1,6 @@
+it\unipd\mtss\NegativeNumberException.class
+it\unipd\mtss\NotRomanLetterException.class
+it\unipd\mtss\BiggerThan1000Exception.class
+it\unipd\mtss\RomanPrinter.class
+it\unipd\mtss\IntegerToRoman.class
+it\unipd\mtss\ZeroException.class
