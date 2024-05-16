@@ -24,6 +24,13 @@ public class IntegerToRomanTest {
         String roman="III";
         assertEquals(IntegerToRoman.convert(num), roman);
     }
+    @Test
+    public void Convert6() 
+    throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
+        int num=6;
+        String roman="VI";
+        assertEquals(IntegerToRoman.convert(num), roman);
+    }
     //Testing exception
     @Test(expected = ZeroException.class)
     public void convertZero() 

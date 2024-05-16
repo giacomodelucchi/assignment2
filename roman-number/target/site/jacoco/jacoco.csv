@@ -2,6 +2,6 @@ GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_
 roman-number,it.unipd.mtss,NegativeNumberException,0,4,0,0,0,2,0,1,0,1
 roman-number,it.unipd.mtss,ZeroException,0,4,0,0,0,2,0,1,0,1
 roman-number,it.unipd.mtss,BiggerThan1000Exception,0,4,0,0,0,2,0,1,0,1
-roman-number,it.unipd.mtss,IntegerToRoman,0,47,0,6,0,6,0,5,0,2
+roman-number,it.unipd.mtss,IntegerToRoman,0,59,0,6,0,6,0,5,0,2
 roman-number,it.unipd.mtss,NotRomanLetterException,0,5,0,0,0,2,0,1,0,1
 roman-number,it.unipd.mtss,RomanPrinter,0,91,0,8,0,17,0,7,0,3
