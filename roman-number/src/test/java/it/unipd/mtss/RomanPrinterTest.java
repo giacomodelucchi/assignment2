@@ -19,10 +19,6 @@ public class RomanPrinterTest {
     public static void startPrinter() {
         printer = new RomanPrinter();
     }
-    @Test
-    public void testPrint() {
-
-    }
 
     @Test
     public void Print1ASCII() 
@@ -40,6 +36,23 @@ public class RomanPrinterTest {
             
             assertEquals(I , ascii);
     } 
+
+    @Test
+    public void Print5ASCII() throws NegativeNumberException, ZeroException, 
+    BiggerThan1000Exception, NotRomanLetterException {
+        int number= 5;
+        String ascii= RomanPrinter.print(number);
+        String V =(
+            " __      __ \n"+
+            " \\ \\    / / \n"+
+            "  \\ \\  / /  \n"+ 
+            "   \\ \\/ /   \n"+ 
+            "    \\  /    \n"+
+            "     \\/     \n");
+            
+            assertEquals(V , ascii);
+    }
+
     @Test(expected = NotRomanLetterException.class)
     public void PrintNotRomanLetter() 
     throws NegativeNumberException, ZeroException, 
@@ -51,7 +64,6 @@ public class RomanPrinterTest {
         }
     }
 
-
     @Test(expected = NullPointerException.class)
     public void PrintNullInput() 
     throws NegativeNumberException, BiggerThan1000Exception, 
@@ -60,9 +72,5 @@ public class RomanPrinterTest {
             utilities.when(() -> IntegerToRoman.convert(123)).thenReturn(null);
             RomanPrinter.print(123);
         }
-    }
-    @Test
-    public void testPrintAsciiArt(){
-        
     }
 }
