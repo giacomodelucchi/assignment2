@@ -1,13 +1,66 @@
+////////////////////////////////////////////////////////////////////
+// GIACOMO DE LUCCHI 2086020
+// NICCOLO CARLESSO 1224446
+////////////////////////////////////////////////////////////////////
+
 package it.unipd.mtss;
 
+import static org.junit.Assert.assertEquals;
+import org.mockito.MockedStatic;
+import org.mockito.Mockito;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class RomanPrinterTest {
+        
+    static RomanPrinter printer;
+
+    @BeforeClass
+    public static void startPrinter() {
+        printer = new RomanPrinter();
+    }
     @Test
     public void testPrint() {
 
     }
 
+    @Test
+    public void Print1ASCII() 
+    throws NegativeNumberException, ZeroException, 
+    BiggerThan1000Exception, NotRomanLetterException{
+        int number= 1;
+        String ascii= RomanPrinter.print(number);
+        String I =(
+            "  _____  \n"+
+            " |_   _| \n"+
+            "   | |   \n"+ 
+            "   | |   \n"+ 
+            "  _| |_  \n"+ 
+            " |_____| \n");
+            
+            assertEquals(I , ascii);
+    } 
+    @Test(expected = NotRomanLetterException.class)
+    public void PrintNotRomanLetter() 
+    throws NegativeNumberException, ZeroException, 
+    BiggerThan1000Exception, NotRomanLetterException {
+        
+        try (MockedStatic<IntegerToRoman> utilities = Mockito.mockStatic(IntegerToRoman.class)) {
+            utilities.when(() -> IntegerToRoman.convert(123)).thenReturn("DefinitelyNotRoman");
+            RomanPrinter.print(123);
+        }
+    }
+
+
+    @Test(expected = NullPointerException.class)
+    public void PrintNullInput() 
+    throws NegativeNumberException, BiggerThan1000Exception, 
+    NotRomanLetterException, ZeroException {
+        try (MockedStatic<IntegerToRoman> utilities = Mockito.mockStatic(IntegerToRoman.class)) {
+            utilities.when(() -> IntegerToRoman.convert(123)).thenReturn(null);
+            RomanPrinter.print(123);
+        }
+    }
     @Test
     public void testPrintAsciiArt(){
         
