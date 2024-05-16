@@ -14,6 +14,7 @@ public class RomanPrinter {
     BiggerThan1000Exception, NotRomanLetterException {
         return printAsciiArt(IntegerToRoman.convert(num));
     }
+
     private static String printAsciiArt(String romanNumber)
     throws NotRomanLetterException{
         String[] I ={
@@ -23,22 +24,28 @@ public class RomanPrinter {
             "   | |   ", 
             "  _| |_  ", 
             " |_____| "};
+        
+        String[] V ={
+            " __      __ ", 
+            " \\ \\    / / ",
+            "  \\ \\  / /  ", 
+            "   \\ \\/ /   ", 
+            "    \\  /    ", 
+            "     \\/     "};
 
-            String result="";
-
+        String result="";
 
         for (int j=0; j<6;j++){
-            
             for (char c : romanNumber.toCharArray()) {
                 if(c =='I') {result+= I[j];}
+                if(c =='V') {result+= V[j];}
                 
-                if (!(Arrays.asList('I').contains(c))){
+                if (!(Arrays.asList('I', 'V').contains(c))){
                     throw new NotRomanLetterException(c);
                 }
             }    
             result+="\n";
         }
         return result;
-    }
-    
+    } 
 }
