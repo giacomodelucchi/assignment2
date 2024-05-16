@@ -53,11 +53,28 @@ public class RomanPrinterTest {
             assertEquals(V , ascii);
     }
 
+    @Test
+    public void Print10ASCII() throws NegativeNumberException, ZeroException, 
+    BiggerThan1000Exception, NotRomanLetterException{
+        int number= 10;
+        String ascii= RomanPrinter.print(number);
+        String X =(
+                 " __   __  \n"+
+                 " \\ \\ / /  \n"+
+                 "  \\ V /   \n"+
+                 "   > <    \n"+
+                 "  / . \\   \n"+
+                 " /_/ \\_\\  \n"
+                );
+            
+        assertEquals(X , ascii);
+    }
+    
+
     @Test(expected = NotRomanLetterException.class)
     public void PrintNotRomanLetter() 
     throws NegativeNumberException, ZeroException, 
     BiggerThan1000Exception, NotRomanLetterException {
-        
         try (MockedStatic<IntegerToRoman> utilities = Mockito.mockStatic(IntegerToRoman.class)) {
             utilities.when(() -> IntegerToRoman.convert(123)).thenReturn("DefinitelyNotRoman");
             RomanPrinter.print(123);

@@ -33,20 +33,28 @@ import java.util.Arrays;
             &quot;    \\  /    &quot;, 
             &quot;     \\/     &quot;};
 
-<span class="fc" id="L36">        String result=&quot;&quot;;</span>
+<span class="fc" id="L36">        String[] X ={&quot; __   __  &quot;, </span>
+            &quot; \\ \\ / /  &quot;,
+            &quot;  \\ V /   &quot;,
+            &quot;   &gt; &lt;    &quot;,
+            &quot;  / . \\   &quot;,
+            &quot; /_/ \\_\\  &quot;};
 
-<span class="fc bfc" id="L38" title="All 2 branches covered.">        for (int j=0; j&lt;6;j++){</span>
-<span class="fc bfc" id="L39" title="All 2 branches covered.">            for (char c : romanNumber.toCharArray()) {</span>
-<span class="fc bfc" id="L40" title="All 2 branches covered.">                if(c =='I') {result+= I[j];}</span>
-<span class="fc bfc" id="L41" title="All 2 branches covered.">                if(c =='V') {result+= V[j];}</span>
+<span class="fc" id="L43">        String result=&quot;&quot;;</span>
+
+<span class="fc bfc" id="L45" title="All 2 branches covered.">        for (int j=0; j&lt;6;j++){</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">            for (char c : romanNumber.toCharArray()) {</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">                if(c =='I') {result+= I[j];}</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">                if(c =='V') {result+= V[j];}</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">                if(c =='X') {result+= X[j];}</span>
                 
-<span class="fc bfc" id="L43" title="All 2 branches covered.">                if (!(Arrays.asList('I', 'V').contains(c))){</span>
-<span class="fc" id="L44">                    throw new NotRomanLetterException(c);</span>
+<span class="fc bfc" id="L51" title="All 2 branches covered.">                if (!(Arrays.asList('I', 'V', 'X').contains(c))){</span>
+<span class="fc" id="L52">                    throw new NotRomanLetterException(c);</span>
                 }
             }    
-<span class="fc" id="L47">            result+=&quot;\n&quot;;</span>
+<span class="fc" id="L55">            result+=&quot;\n&quot;;</span>
         }
-<span class="fc" id="L49">        return result;</span>
+<span class="fc" id="L57">        return result;</span>
     } 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

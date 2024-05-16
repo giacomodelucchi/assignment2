@@ -13,7 +13,8 @@ public class IntegerToRoman {
         if(number<0) {throw new NegativeNumberException();}
         if(number>1000) {throw new BiggerThan1000Exception();}
     
-        String[] unita = {"", "I", "II", "III","IV","V","VI"};
-        return unita[number % 7];
+        String[] unita = {"", "I", "II", "III","IV","V","VI","VII","VIII","IX"};
+        String[] decine = {"", "X"};
+        return decine[number/10] + unita[number % 10];
     }
 }

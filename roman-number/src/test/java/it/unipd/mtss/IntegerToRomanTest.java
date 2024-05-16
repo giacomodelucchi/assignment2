@@ -31,6 +31,20 @@ public class IntegerToRomanTest {
         String roman="VI";
         assertEquals(IntegerToRoman.convert(num), roman);
     }
+    @Test
+    public void Convert9() 
+    throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
+        int num=9;
+        String roman="IX";
+        assertEquals(IntegerToRoman.convert(num), roman);
+    }
+    @Test
+    public void Convert10() 
+    throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
+        int num=10;
+        String roman="X";
+        assertEquals(IntegerToRoman.convert(num), roman);
+    }
     //Testing exception
     @Test(expected = ZeroException.class)
     public void convertZero() 
