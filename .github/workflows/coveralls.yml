@@ -1,6 +1,6 @@
 name: Coverage from coveralls
 
-on: [push]
+on: ["push", "pull_request"]
 
 jobs:
     build:
@@ -20,6 +20,4 @@ jobs:
               run: mvn --batch-mode --update-snapshots test jacoco:report
               
             - name: Coveralls Report
-              env:
-                  github-token: ${{ secrets.GITHUB_TOKEN }}
               run: mvn -B coveralls:report
