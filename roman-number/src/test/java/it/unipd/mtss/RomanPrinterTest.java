@@ -99,6 +99,22 @@ public class RomanPrinterTest {
         assertEquals(C , ascii);
     }
 
+    @Test
+    public void Print500ASCII() throws NegativeNumberException, ZeroException, 
+    BiggerThan1000Exception, NotRomanLetterException{
+        int number= 500;
+        String ascii= RomanPrinter.print(number);
+        String D =(
+            "  ____    \n"+
+            " |  __ \\  \n"+
+            " | |  | | \n"+
+            " | |  | | \n"+
+            " | |__| | \n"+
+            " |_____/  \n" 
+        );
+        assertEquals(D , ascii);
+    }
+
     @Test(expected = NotRomanLetterException.class)
     public void PrintNotRomanLetter() 
     throws NegativeNumberException, ZeroException, 
