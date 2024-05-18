@@ -23,7 +23,7 @@ jobs:
               
             - name: Coveralls Execution
               with:
-                  github-token: ${{ secrets.GITHUB_TOKEN }};
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
              
             - name: Coveralls Report
               run: mvn -B coveralls:report
