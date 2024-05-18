@@ -33,8 +33,7 @@ public class RomanPrinterTest {
             "   | |   \n"+ 
             "  _| |_  \n"+ 
             " |_____| \n");
-            
-            assertEquals(I , ascii);
+        assertEquals(I , ascii);
     } 
 
     @Test
@@ -49,8 +48,7 @@ public class RomanPrinterTest {
             "   \\ \\/ /   \n"+ 
             "    \\  /    \n"+
             "     \\/     \n");
-            
-            assertEquals(V , ascii);
+        assertEquals(V , ascii);
     }
 
     @Test
@@ -66,7 +64,6 @@ public class RomanPrinterTest {
                  "  / . \\   \n"+
                  " /_/ \\_\\  \n"
                 );
-            
         assertEquals(X , ascii);
     }
     
@@ -83,8 +80,23 @@ public class RomanPrinterTest {
             " | |____  \n"+
             " |______| \n"
         );
-            
-            assertEquals(L , ascii);
+        assertEquals(L , ascii);
+    }
+
+    @Test
+    public void Print100ASCII() throws NegativeNumberException, ZeroException, 
+    BiggerThan1000Exception, NotRomanLetterException{
+        int number= 100;
+        String ascii= RomanPrinter.print(number);
+        String C =(
+            "   _____   \n"+  
+            "  / ____|  \n"+
+            " | |       \n"+
+            " | |       \n"+
+            " | |____   \n"+
+            "  \\_____|  \n" 
+        );
+        assertEquals(C , ascii);
     }
 
     @Test(expected = NotRomanLetterException.class)
