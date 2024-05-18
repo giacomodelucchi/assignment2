@@ -14,7 +14,9 @@ public class IntegerToRoman {
         if(number>1000) {throw new BiggerThan1000Exception();}
     
         String[] unita = {"", "I", "II", "III","IV","V","VI","VII","VIII","IX"};
-        String[] decine = {"", "X", "XX", "XXX", "XL", "L"};
-        return decine[(number/10) %6] + unita[number % 10];
+        String[] decine = {"","X","XX","XXX","XL","L","LX","LXX","LXXX","XC"};
+        String[] centinaia = {"", "C"};
+        return centinaia[(number/100) %2] 
+        + decine[(number/10) %10] + unita[number % 10];
     }
 }
