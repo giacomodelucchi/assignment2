@@ -28,5 +28,5 @@ jobs:
                   
             - name: Coveralls Report
               env:
-                    COVERALLS_REPO_TOKEN: ${{j53NGeJxhRNGfGb8iXp9fx2rD8ut4CvcJ}}
+                COVERALLS_REPO_TOKEN: ${{ j53NGeJxhRNGfGb8iXp9fx2rD8ut4CvcJ }}
               run: mvn -B coveralls:report
