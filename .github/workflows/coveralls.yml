@@ -20,11 +20,11 @@ jobs:
                   
             - name: Build with Maven
               run: mvn --batch-mode --update-snapshots test jacoco:report
-              
-            - name: Coveralls Execution
-              uses: coverallsapp/github-action@master
-              with:
-                  github-token: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Coveralls GitHub Action
+              uses: coverallsapp/github-action@v2.3.0
              
             - name: Coveralls Report
+              env:
+                    github-token: ${{ secrets.GITHUB_TOKEN }}
               run: mvn -B coveralls:report
