@@ -15,8 +15,9 @@ public class IntegerToRoman {
     
         String[] unita = {"", "I", "II", "III","IV","V","VI","VII","VIII","IX"};
         String[] decine = {"","X","XX","XXX","XL","L","LX","LXX","LXXX","XC"};
-        String[] centinaia = {"","C","CC","CCC","CD","D"};
-        return centinaia[(number/100) %6] 
+        String[] centinaia = {"","C","CC","CCC","CD","D","DC","DCC","DCCC","CM"};
+        String[] migliaia = {"","M"};
+        return migliaia[(number/1000) %2]  + centinaia[(number/100) %10] 
         + decine[(number/10) %10] + unita[number % 10];
     }
 }
