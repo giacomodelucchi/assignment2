@@ -14,8 +14,8 @@ package it.unipd.mtss;
 <span class="fc bfc" id="L14" title="All 2 branches covered.">        if(number&gt;1000) {throw new BiggerThan1000Exception();}</span>
     
 <span class="fc" id="L16">        String[] unita = {&quot;&quot;, &quot;I&quot;, &quot;II&quot;, &quot;III&quot;,&quot;IV&quot;,&quot;V&quot;,&quot;VI&quot;,&quot;VII&quot;,&quot;VIII&quot;,&quot;IX&quot;};</span>
-<span class="fc" id="L17">        String[] decine = {&quot;&quot;, &quot;X&quot;};</span>
-<span class="fc" id="L18">        return decine[number/10] + unita[number % 10];</span>
+<span class="fc" id="L17">        String[] decine = {&quot;&quot;, &quot;X&quot;, &quot;XX&quot;};</span>
+<span class="fc" id="L18">        return decine[(number/10) %3] + unita[number % 10];</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
