@@ -1,4 +1,4 @@
-name: Upload coverage to coveralls
+name: Coverage from coveralls
 
 on: [push]
 
