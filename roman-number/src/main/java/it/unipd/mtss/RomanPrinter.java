@@ -39,7 +39,16 @@ public class RomanPrinter {
             "   > <    ",
             "  / . \\   ",
             " /_/ \\_\\  "};
-
+        
+        String[] L ={
+            "  _       ", 
+            " | |      ",
+            " | |      ",
+            " | |      ",
+            " | |____  ",
+            " |______| "
+        };
+        
         String result="";
 
         for (int j=0; j<6;j++){
@@ -47,8 +56,9 @@ public class RomanPrinter {
                 if(c =='I') {result+= I[j];}
                 if(c =='V') {result+= V[j];}
                 if(c =='X') {result+= X[j];}
+                if(c =='L') {result+= L[j];}
                 
-                if (!(Arrays.asList('I', 'V', 'X').contains(c))){
+                if (!(Arrays.asList('I', 'V', 'X', 'L').contains(c))){
                     throw new NotRomanLetterException(c);
                 }
             }    
