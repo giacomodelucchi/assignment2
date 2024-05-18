@@ -70,6 +70,22 @@ public class RomanPrinterTest {
         assertEquals(X , ascii);
     }
     
+    @Test 
+    public void Print50ASCII() throws NegativeNumberException, ZeroException, 
+    BiggerThan1000Exception, NotRomanLetterException{
+        int number= 50;
+        String ascii= RomanPrinter.print(number);
+        String L =(
+            "  _       \n"+
+            " | |      \n"+
+            " | |      \n"+
+            " | |      \n"+
+            " | |____  \n"+
+            " |______| \n"
+        );
+            
+            assertEquals(L , ascii);
+    }
 
     @Test(expected = NotRomanLetterException.class)
     public void PrintNotRomanLetter() 
