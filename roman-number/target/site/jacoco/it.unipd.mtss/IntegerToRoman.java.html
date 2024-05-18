@@ -5,10 +5,17 @@
 
 package it.unipd.mtss;
 
-<span class="nc" id="L8">public class IntegerToRoman {</span>
-    public static String convert(int number){
-        // TODO
-<span class="nc" id="L11">        return null;</span>
+<span class="fc" id="L8">public class IntegerToRoman {</span>
+    public static String convert(int number) 
+    throws ZeroException, NegativeNumberException, BiggerThan1000Exception{
+    
+<span class="fc bfc" id="L12" title="All 2 branches covered.">        if(number==0) {throw new ZeroException(); }</span>
+<span class="fc bfc" id="L13" title="All 2 branches covered.">        if(number&lt;0) {throw new NegativeNumberException();}</span>
+<span class="fc bfc" id="L14" title="All 2 branches covered.">        if(number&gt;1000) {throw new BiggerThan1000Exception();}</span>
+    
+<span class="fc" id="L16">        String[] unita = {&quot;&quot;, &quot;I&quot;, &quot;II&quot;, &quot;III&quot;,&quot;IV&quot;,&quot;V&quot;,&quot;VI&quot;,&quot;VII&quot;,&quot;VIII&quot;,&quot;IX&quot;};</span>
+<span class="fc" id="L17">        String[] decine = {&quot;&quot;, &quot;X&quot;, &quot;XX&quot;};</span>
+<span class="fc" id="L18">        return decine[(number/10) %3] + unita[number % 10];</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
